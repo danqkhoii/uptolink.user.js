@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 230px;
+      padding: 16px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0a192f;
+      color: #e6f1ff;
+      margin: 0;
+    }
+    .card {
+      background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+      padding: 14px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    h3 {
+      margin: 0 0 10px 0;
+      font-size: 15px;
+      color: #80d8ff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .info-box {
+      background: rgba(0, 0, 0, 0.25);
+      padding: 10px;
+      border-radius: 12px;
+      font-size: 11px;
+      color: #b2ebf2;
+      margin-bottom: 12px;
+      word-break: break-all;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: linear-gradient(90deg, #00b0ff 0%, #00e5ff 100%);
+      color: #002171;
+      border: none;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 229, 255, 0.3);
+      transition: all 0.2s ease;
+    }
+    button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 14px rgba(0, 229, 255, 0.5);
+    }
+    #status {
+      font-size: 11px;
+      margin-top: 8px;
+      text-align: center;
+      min-height: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h3>🌊 Dangkhoi Helper</h3>
+    <div class="info-box">
+      <div><b>Nguồn API:</b> androidmodvip.io.vn</div>
+      <div style="margin-top: 4px;"><b>Proxy hiện tại:</b></div>
+      <span id="currentProxy" style="color: #ffffff; font-weight: bold;">Chưa kích hoạt</span>
+    </div>
+
+    <button id="manualRotate">Xoay Proxy Mới</button>
+    <div id="status"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

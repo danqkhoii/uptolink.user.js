@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Dangkhoi Bypass & Proxy Rotator",
+  "version": "2.0",
+  "permissions": [
+    "proxy",
+    "storage",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "http://proxy.androidmodvip.io.vn/*",
+    "https://proxy.androidmodvip.io.vn/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
